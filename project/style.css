@@ -20,7 +20,7 @@ header {
 /* Hero Section */
 .hero {
     height: 100vh;
-    background: url('https://images.unsplash.com/photo-1464822759844-d150ad6d1c23') no-repeat center/cover;
+    background: url('snowy-mountain-sunset-stockcake.jpg') no-repeat center/cover;
     display: flex;
     justify-content: center;
     align-items: center;
