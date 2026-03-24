@@ -1,21 +1,54 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>My Website</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nature Escape</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<div class="container">
-    <h1>🚀 Jenkins CI/CD Working</h1>
+<header>
+    <h1>🌄 Nature Escape</h1>
+    <p>Explore the beauty of mountains</p>
+</header>
 
-    <form id="form">
-        <input type="text" id="name" placeholder="Enter your name">
-        <button type="submit">Submit</button>
-    </form>
+<section class="hero">
+    <div class="overlay">
+        <h2>Feel the Nature</h2>
+        <p>Breathe. Relax. Explore.</p>
+        <button onclick="scrollToSection()">Explore</button>
+    </div>
+</section>
 
-    <h2 id="output"></h2>
-</div>
+<section class="content" id="about">
+    <h2>About Mountains</h2>
+    <p>
+        Mountains are majestic and peaceful. They inspire adventure, calmness,
+        and a deep connection with nature.
+    </p>
+
+    <div class="cards">
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1501785888041-af3ef285b470" />
+            <h3>Adventure</h3>
+        </div>
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee" />
+            <h3>Peace</h3>
+        </div>
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1493244040629-496f6d136cc3" />
+            <h3>Nature</h3>
+        </div>
+    </div>
+</section>
+
+<footer>
+    <p>© 2026 Nature Escape | Made with ❤️</p>
+</footer>
 
 <script src="script.js"></script>
 </body>
