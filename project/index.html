@@ -7,11 +7,17 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
 <header>
-    <h1>🌄 Nature Escape</h1>
-    <p>Explore the beauty of mountains</p>
-    <button class="blog-btn" onclick="openBlog()">📝 Blog</button>
+    <div class="header-inner">
+        <div>
+            <h1>🌄 Nature Escape</h1>
+            <p>Explore the beauty of mountains</p>
+        </div>
+        <button class="blog-btn" onclick="openBlog()">📝 Blog</button>
+    </div>
 </header>
+
 <section class="hero">
     <div class="overlay">
         <h2>Feel the Nature</h2>
@@ -19,12 +25,11 @@
         <button onclick="scrollToSection()">Explore</button>
     </div>
 </section>
+
 <section class="content" id="about">
     <h2>About Mountains</h2>
-    <p>
-        Mountains are majestic and peaceful. They inspire adventure, calmness,
-        and a deep connection with nature.
-    </p>
+    <p>Mountains are majestic and peaceful. They inspire adventure, calmness,
+        and a deep connection with nature.</p>
     <div class="cards">
         <div class="card">
             <img src="istockphoto-485371557-612x612.jpg" />
@@ -41,7 +46,7 @@
     </div>
 </section>
 
-<!-- Blog Messages Section on Home Page -->
+<!-- Blog Messages on Home Page -->
 <section class="blog-display" id="blogSection">
     <h2>📝 Community Blog</h2>
     <p class="blog-subtitle">Messages from our community</p>
@@ -54,7 +59,7 @@
     <p>© 2026 Nature Escape | Made with ❤️</p>
 </footer>
 
-<!-- Blog Modal / Page Overlay -->
+<!-- Blog Modal -->
 <div class="blog-modal" id="blogModal">
     <div class="blog-modal-content">
         <button class="close-btn" onclick="closeBlog()">✕</button>
