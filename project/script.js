@@ -1,18 +1,18 @@
-// existing function - unchanged
+// existing — unchanged
 function scrollToSection() {
-    document.getElementById("about").scrollIntoView({
-        behavior: "smooth"
-    });
+    document.getElementById("about").scrollIntoView({ behavior: "smooth" });
 }
 
-// ── BLOG FUNCTIONS ──
-
+// open modal
 function openBlog() {
     document.getElementById("blogModal").classList.add("active");
+    document.body.style.overflow = "hidden";
 }
 
+// close modal
 function closeBlog() {
     document.getElementById("blogModal").classList.remove("active");
+    document.body.style.overflow = "auto";
     document.getElementById("blogName").value = "";
     document.getElementById("blogText").value = "";
     document.getElementById("charCount").textContent = "0 / 300";
@@ -29,9 +29,9 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 });
 
-// submit blog message
+// submit message
 function submitBlog() {
-    const name = document.getElementById("blogName").value.trim();
+    const name    = document.getElementById("blogName").value.trim();
     const message = document.getElementById("blogText").value.trim();
 
     if (!name) {
@@ -43,15 +43,12 @@ function submitBlog() {
         return;
     }
 
-    // remove "no messages" placeholder
     const noMsg = document.querySelector(".no-messages");
     if (noMsg) noMsg.remove();
 
-    // get current time
-    const now = new Date();
+    const now  = new Date();
     const time = now.toLocaleString();
 
-    // create blog card
     const card = document.createElement("div");
     card.classList.add("blog-card");
     card.innerHTML = `
@@ -61,18 +58,12 @@ function submitBlog() {
     `;
 
     document.getElementById("blogMessages").appendChild(card);
-
-    // scroll to blog section
     document.getElementById("blogSection").scrollIntoView({ behavior: "smooth" });
-
-    // close modal
     closeBlog();
 }
 
-// close modal if user clicks outside
+// close modal on background click
 window.addEventListener("click", function (e) {
     const modal = document.getElementById("blogModal");
-    if (e.target === modal) {
-        closeBlog();
-    }
+    if (e.target === modal) closeBlog();
 });
