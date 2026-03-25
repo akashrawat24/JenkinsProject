@@ -7,12 +7,11 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
 <header>
     <h1>🌄 Nature Escape</h1>
     <p>Explore the beauty of mountains</p>
+    <button class="blog-btn" onclick="openBlog()">📝 Blog</button>
 </header>
-
 <section class="hero">
     <div class="overlay">
         <h2>Feel the Nature</h2>
@@ -20,25 +19,21 @@
         <button onclick="scrollToSection()">Explore</button>
     </div>
 </section>
-
 <section class="content" id="about">
     <h2>About Mountains</h2>
     <p>
         Mountains are majestic and peaceful. They inspire adventure, calmness,
         and a deep connection with nature.
     </p>
-
     <div class="cards">
         <div class="card">
             <img src="istockphoto-485371557-612x612.jpg" />
             <h3>Adventure</h3>
         </div>
-
         <div class="card">
             <img src="pexels-souvenirpixels-417074.jpg" />
             <h3>Peace</h3>
         </div>
-
         <div class="card">
             <img src="images.jpeg" />
             <h3>Nature</h3>
@@ -46,9 +41,31 @@
     </div>
 </section>
 
+<!-- Blog Messages Section on Home Page -->
+<section class="blog-display" id="blogSection">
+    <h2>📝 Community Blog</h2>
+    <p class="blog-subtitle">Messages from our community</p>
+    <div class="blog-messages" id="blogMessages">
+        <p class="no-messages">No messages yet. Be the first to write!</p>
+    </div>
+</section>
+
 <footer>
     <p>© 2026 Nature Escape | Made with ❤️</p>
 </footer>
+
+<!-- Blog Modal / Page Overlay -->
+<div class="blog-modal" id="blogModal">
+    <div class="blog-modal-content">
+        <button class="close-btn" onclick="closeBlog()">✕</button>
+        <h2>📝 Write a Blog</h2>
+        <p>Share your thoughts with the community</p>
+        <input type="text" id="blogName" placeholder="Your name" maxlength="50" />
+        <textarea id="blogText" placeholder="Write your message here..." maxlength="300"></textarea>
+        <span class="char-count" id="charCount">0 / 300</span>
+        <button class="submit-btn" onclick="submitBlog()">Post Message</button>
+    </div>
+</div>
 
 <script src="script.js"></script>
 </body>
